@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+actor "User" as us
+actor "Match" as ma
+rectangle Enjoy-App {
+	usecase "Log in" as UC1
+	usecase "Verify Password" as subl1
+	usecase "Bad login" as subl2
+	usecase "Forgot Password" as subl3
+	(UC1) .> (subl1) : include
+	(subl2) .> (UC1) : extends
+	(subl3) .> (UC1) : extends
+	usecase UC2 as "Check Messages.
+	--
+	Check Matches."
+	usecase Matches as "Matches.
+	--
+	Superlike."
+	(Matches) .> (UC2) : extends
+	usecase "Make Lists" as MS
+	usecase "Create Music List" as ML
+	usecase "Create Movie List" as KL
+	(ML) --|> (MS)
+	(KL) --|> (MS)
+	usecase US4 as "Set Up profile.
+	--
+	profile help, profile info."
+	usecase "Profile help" as PH
+	usecase "Privacy Policy" as PP
+	(PP) .> US4 : extended
+	(PH) .> US4 : extended
+}
+
+us -- (UC1)
+us -- (UC2)
+us -- (MS)
+us -- (Matches)
+us -- (US4)
+
+ma -- (Matches)
+ma --|> us
+
+
+@enduml
