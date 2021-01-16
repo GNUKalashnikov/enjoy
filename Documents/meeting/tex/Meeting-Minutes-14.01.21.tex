@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=2cm]{geometry}
+\usepackage{placeins}
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\title{Meeting Minutes}
+\date{14.01.21}
+\begin{document}
+\maketitle
+
+\begin{center}
+    \begin{tabular}{ | l | p{14cm} |}
+    \hline
+    Members Present & Ivan, Darius \\ \hline
+    Creator         & Ivan \\ \hline
+    Date            & 14.01.21\\ \hline
+    Time            & 13:58 \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Absences}
+
+Stevens - Not at fault (Was not added to this discussion due to the nature of the discussion) 
+
+\subsection{Agenda}
+
+Discussion was oriented around grasping and establishing a clearly defined structure to the back-end of our project, defining clearly the folders, databases, names and content and methods. Tasks were also discussed in some detail. User permissions were of the topic and so was implementing a level of censorship.
+
+
+
+\subsection{Meeting Notes}
+\begin{itemize}
+    \item Login
+	\begin{itemize}
+	\item UserName
+	\item Password \textit{Foreign Key}
+	\item OTP (One Time Password)
+	\item Details \textit{Foreign Key}
+	\item Handshake
+	\end{itemize}
+   \item Profiles (Users)
+	\begin{itemize}
+	\item ID 
+		\begin{itemize}
+			\item \textit{Foreign Key}
+		\end{itemize}
+	\end{itemize}
+	\item Detail
+		\begin{itemize}
+			\item First Name
+			\item Surname
+			\item E-mail
+			\item D.O.B
+			\item Location
+			\begin{itemize}
+				\item \textit{Foreign Key}
+				\item Coordinates
+				\item Restrict Area
+				\item Manually Input
+				\item Data received from Geo location
+			\end{itemize}
+		\end{itemize}
+	\item Messages
+		\begin{itemize}
+		\item Unique Key: varchar
+		\item Note: Table per chat
+		\end{itemize}
+	\item Keys
+		\begin{itemize}
+		\item Pseudonym Tools:Varchar
+		\end{itemize}
+	\item Censorship
+		\begin{itemize}
+		\item note: Text based, followed by a shell script that checks the text against the input
+		\end{itemize}
+\end{itemize}
+
+
+\subsection{Meeting Summary}
+
+The meeting was very successful in establishing a detailed although not finished structure to the back-end of our project, with the UML diagram and this combined we have some understanding into what the application will function internally.
+
+\end{document}
