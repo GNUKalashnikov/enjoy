@@ -6,7 +6,7 @@
 
 <img src="https://enjoys.cool/SandBox/home.png" alt="home" width="526" height="277" class="jop-noMdConv">
 
-[Website](/usr/share/joplin-desktop/resources/app.asar/enjoys.cool "enjoys.cool")
+[Website](/usr/share/joplin-desktop/resources/app.asar/enjoys.cool "https://enjoys.cool")
 
 Enjoy in a application on android and IOS(soon) as well as a React web app, created as a final year project
 
